@@ -1,0 +1,26 @@
+<div class="background-calendar">
+  <div class="calendar">
+    <div class="calendar__opts">
+      <select name="calendar__month" id="calendar__month">
+        <option *ngFor="let month of months" [disabled]="month != 'מרץ'" [selected]="month == 'מרץ'">{{month}}</option>
+      </select>
+
+      <select name="calendar__year" id="calendar__year">
+        <option disabled>2003</option>
+        <option selected>2023</option>
+      </select>
+    </div>
+
+    <div class="calendar__body">
+      <div class="calendar__days">
+        <div *ngFor="let day of days">{{day}}</div>
+      </div>
+
+      <div class="calendar__dates">
+        <div (click)="clickedDate(date)" class="calendar__date"  [class]="date == 14 ? 'calendar__date--range-end' : ''" *ngFor="let date of dates; let i = index;"><span [class]=" i < 16 ? 'calendar__date--grey' : ''">{{date}}</span></div>
+      </div>
+    </div>
+
+    <app-error-message *ngIf="pickedDate" [errorText]="errorText" [errorTitle]="errorTitle" [exitText]="exitText" (onExit)="onExit()"></app-error-message>
+  </div>
+</div>

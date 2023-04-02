@@ -1,0 +1,103 @@
+.playlist {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(130 195 255 / 75%);
+}
+
+.song-container {
+  height: 72vh;
+  background-color: #fff;
+  width: 22vw;
+  left: 24vw;
+  top: 10vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 41px;
+}
+
+.song-cover {
+  height: 30vh;
+  width: 18vw;
+  margin-bottom: 5vh;
+}
+
+.title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1.8vh;
+  font-weight: 400;
+}
+
+.artist {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.prev-song {
+  rotate: 180deg;
+}
+
+.controls-container {
+  margin-top: 3vh;
+}
+
+.slide-1 {
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-name: slide-left;
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-left {
+  33% {
+    transform: translateX(20vw);
+    opacity: 0%;
+  }
+  66% {
+    opacity: 0%;
+    transform: translateX(-20vw);
+  }
+  99% {
+    opacity: 100%;
+  }
+}
+
+.slide1 {
+  animation-fill-mode: forwards;
+  animation-duration: 1.7s;
+  animation-name: slide-right;
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-right {
+  33% {
+    transform: translateX(-20vw);
+    opacity: 0%;
+  }
+  66% {
+    opacity: 0%;
+    transform: translateX(20vw);
+  }
+  99% {
+    opacity: 100%;
+  }
+}
+
+
+.text-container {
+  background-color: #fff;
+  height: fit-content;
+  width: 24vw;
+  position: absolute;
+  right: 22vw;
+  top: 21vh;
+  min-height: 52vh;
+  border-radius: 41px;
+  direction: rtl;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 2%;
+}

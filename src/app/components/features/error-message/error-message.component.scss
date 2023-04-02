@@ -1,0 +1,107 @@
+.error-message {
+  background-color: aliceblue;
+  height: 31vh;
+  width: 34vw;
+  top: 0px;
+  position: relative;
+  min-width: 325px;
+  max-width: 810px;
+  text-align: center;
+  margin: auto;
+  margin-top: 22vh;
+  border-radius: 37px;
+}
+
+.sub-title {
+  padding-top: 2vh;
+}
+
+.text-container {
+  font-size: 1.4rem;
+  margin-top: 3vh;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  background-color: rgb(91 110 143 / 50%);
+  right: 0;
+}
+
+.closing {
+  animation-duration: 1000ms;
+  animation-name: closing;
+  animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
+}
+
+.opening {
+  animation-duration: 1000ms;
+  animation-name: opening;
+  animation-iteration-count: 1;
+}
+
+
+@keyframes closing{
+  from{
+    opacity: 1;
+  }
+  to{
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes opening{
+  from{
+    margin-top: 100%;
+    opacity: 0;
+  }
+  to{
+    margin-top: 23vh;
+    opacity: 1;
+  }
+}
+
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 1.7rem;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  margin: auto;
+  margin-top: 5vh;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}

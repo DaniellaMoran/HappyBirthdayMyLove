@@ -1,0 +1,99 @@
+.background {
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  right: 0;
+  width: 100vw;
+  background-color: black;
+  direction: rtl;
+}
+
+p {
+  padding: 1.3vh;
+}
+
+p:hover {
+  background-color: #2c2c2c;
+  transform: scale(1.02);
+  border-radius: 16px;
+}
+
+.test-text {
+  height: 30vh;
+  text-align: center;
+}
+
+.containers {
+  background-color: #1c1c1d;
+  border-radius: 25px;
+  color: white;
+}
+.lines {
+  height: 0.2px;
+  background-color: #f0f8ff7a;
+  border: none;
+  width: 104.2%;
+  position: relative;
+  top: -1.76vh;
+}
+
+.details {
+  color: grey;
+  position: absolute;
+  left: 1vw;
+}
+
+
+.line {
+  height: 0.2px;
+  background-color: #f0f8ff7a;
+  border: none;
+}
+
+.title-line {
+  flex: 1;
+}
+.arrow {
+  position: absolute;
+  left: 1vw;
+  height: 2.7vh;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  padding: 1.5vh;
+}
+
+.chosen-setting {
+  background-color: #1365bb;
+}
+
+.icon {
+  height: 3vh;
+  display: inline-block;
+  margin-left: 0.6vw;
+}
+
+.main-content {
+  height: fit-content;
+  width: 53vw;
+  right: 34vw;
+  position: absolute;
+  top: 18vh;
+}
+
+.side-content {
+  height: fit-content;
+  width: 21vw;
+  right: 6vw;
+  position: absolute;
+  top: 21vh;
+  border-radius: 0px;
+}
+
+.title {
+  color: #fcfcfc;
+  top: -5vh;
+  position: absolute;
+}

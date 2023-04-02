@@ -1,0 +1,23 @@
+
+<div class="body">
+  <div class="iphone-x">
+    <div class="side">
+      <span class="hello-text">Hello</span>
+      <div class="screen">
+        <video  src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/small_2x.mp4" autoplay="autoplay" loop="loop"></video>
+        <div class="button-container">
+          <img [src]="app.src" alt="" *ngFor="let app of apps" [routerLink]="app.route" class="app">
+          <!-- <button [disabled]="pressedButtons.includes(button)" [routerLink]="button" (click)="makeButtonDisabled(button)" *ngFor="let button of buttons">{{button}}</button> -->
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="header">
+      <div class="sensor-1"></div>
+      <div class="sensor-2"></div>
+      <div class="sensor-3"></div>
+    </div>
+    <div class="volume-button"></div>
+    <div class="power-button"></div>
+  </div>
+</div>

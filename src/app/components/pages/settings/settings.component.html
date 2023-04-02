@@ -1,0 +1,56 @@
+<div class="background">
+  <div class="side-content containers">
+    <h1 class="title">הגדרות</h1>
+    <div [class]="currentlyChosen == title.name ? 'chosen-setting' : ''" class="setting" (click)="currentlyChosen = title.name;" *ngFor="let title of titles; let i = index;">
+      <img class="icon" [src]="title.url" alt="url">
+      <span class="title-line">
+        <hr class="lines" *ngIf="i != 0">
+        {{title.name}}
+        <img class="arrow" src="../../../../assets/imgs/arrow.png" alt="arrow">
+      </span>
+    </div>
+  </div>
+  <div class="main-content">
+    <div *ngIf="currentlyChosen == titles[0].name" class="facts-container containers">
+      <h2 class="title">עובדות עליך:</h2>
+      <div class="facts" *ngFor="let fact of facts; let i = index;">
+        <p>-{{fact}}</p>
+        <hr *ngIf="i != facts.length - 1" class="line">
+      </div>
+    </div>
+    <div *ngIf="currentlyChosen == titles[1].name" class="statistics-container containers">
+      <h2 class="title">ה- 14 במרץ, 2003</h2>
+      <div *ngFor="let statistic of statistics | keyvalue: originalOrder; let i = index;">
+        <p>
+          <span>
+            {{statistic.key}}:
+          </span>
+          <span class="details">
+            {{statistic.value.toLocaleString('en', {useGrouping:true})}}
+          </span>
+        </p>
+        <span *ngIf="statistics.size != i + 1"><hr class="line"></span>
+      </div>
+    </div>
+    <div *ngIf="currentlyChosen == titles[2].name" class="facts-container containers">
+      <h2 class="title">נגישות לזקנים:</h2>
+      <div
+      class="test-text"
+      [style.font-weight]="(accessibility.get('עובי פונט') || 100) * 100"
+      [style.font-size]="(accessibility.get('גודל פונט') || 7) + 'rem'">
+        מזל טוב אהוב ליבי
+      </div>
+      <div *ngFor="let accec of accessibility | keyvalue: originalOrder; let i = index;">
+        <p>
+          <span>
+            {{accec.key}}:
+          </span>
+          <span class="details">
+            <input min="1" max="7" [ngModel]="accessibility.get(accec.key)" (ngModelChange)="accessibility.set(accec.key, $event)" type="range">
+          </span>
+        </p>
+        <span *ngIf="accessibility.size != i + 1"><hr class="line"></span>
+      </div>
+    </div>
+  </div>
+</div>

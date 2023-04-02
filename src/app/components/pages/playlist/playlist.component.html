@@ -1,0 +1,15 @@
+<div class="playlist">
+  <div class="song-container">
+    <img [src]="currentSong.songCover" alt="song img" class="song-cover" [class]="currentSliding" (animationend)="animationened()">
+    <h1 class="title">{{currentSong.title}}</h1>
+    <h2 class="artist">{{currentSong.artist}}</h2>
+    <div class="controls-container">
+      <img (click)="slideOut(-1)" src="../../../../assets/imgs/next.png" alt="prev" class="prev-song">
+      <img (click)="toggleAudio()" src="../../../../assets/imgs/play.png" alt="play">
+      <img (click)="slideOut(1)" src="../../../../assets/imgs/next.png" alt="next" class="next-song">
+    </div>
+  </div>
+  <div class="text-container">
+    <p *ngFor="let text of currentSong.text">{{text}}</p>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.background-facetime {
+  background-color: #000000;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  right: 0;
+  width: 100vw;
+}
+
+#contacts-container {
+  background-color: aqua;
+  height: 50%;
+  width: 40%;
+  margin: auto;
+  margin-top: 10%;
+}

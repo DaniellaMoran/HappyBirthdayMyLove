@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  user-select: none;
+}
+
+html,
+body {
+  direction: ltr;
+  height: 100%;
+  font-family: "heebo";
+}
+
+button {
+  height: 8.6vh;
+  width: 28vw;
+  display: block;
+  font-size: 139%;
+  border-radius: 23px;
+  max-width: 188px;
+  min-width: 114px;
+  margin: 20px;
+}

@@ -1,0 +1,9 @@
+<div class="background">
+  <div class="error-message" [@slideInOut] *ngIf="isExited">
+    <h1 class="sub-title">{{errorTitle}}</h1>
+    <div class="text-container">
+      {{errorText}}
+    </div>
+    <button (click)="confirm()" class="button-89" role="button">{{exitText}}</button>
+  </div>
+</div>

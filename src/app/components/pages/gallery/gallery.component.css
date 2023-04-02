@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-color: rgb(120 197 227);
+  height: fit-content;
+}
+
+.photos-logo {
+  position: absolute;
+  top: 2vh;
+  border-radius: 10px;
+  right: 2vw;
+  width: 4vw;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.4em;
+  letter-spacing: 1px;
+  padding-top: 40px;
+  color: white;
+}
+
+/* .gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 66vw;
+  margin: auto;
+} */
+
+.gallery-image {
+  column-count: 4;
+  max-width: 1500px;
+  column-gap: 20px;
+  margin: auto;
+  margin-top: 4vh;
+}
+
+.gallery-image img {
+  height: fit-content;
+  width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  max-width: 332px;
+  max-height: 467px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 100%;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.transparent-box:hover {
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4.5px );
+  -webkit-backdrop-filter: blur( 4.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
